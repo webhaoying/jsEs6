@@ -115,10 +115,35 @@ function foo1() {
 
 /************** let块级作用域引入结束*******/
 
+
 /************** 高阶函数的应用*******/
 function add0 (x,y,f) {
     return f(x)+f(y);
 }
 add0(-6,5,Math.abs);//  11
+
+/************** 高阶函数的应用  结束*******/
+
+
+/************** ES5 中map()  与reduce() 的使用*******/
+/*
+对一个数组中的每个元素进行自乘方之后求和
+其中map就是将数组中的每个元素作为参数，进行函数再运算。
+reduce() 是从左往右提取参数，然后进行函数运算之后，将输出结果在与第三个值进行同样的运算,
+因为reduce()方法中传的参数是一个方法
+ */
+var arrSum = [1,2,3];
+function mapSum(a,b) {
+    return a+b;
+}
+function squareSum(a) {
+    return a*a;
+}
+function squareSum1(arr) {
+    var squareArr = arr.map(squareSum);
+    console.log(squareArr);
+    return squareArr.reduce(mapSum);
+}
+// console.log(squareSum1(arrSum));
 
 /************** 高阶函数的应用  结束*******/
