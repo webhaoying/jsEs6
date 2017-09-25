@@ -147,3 +147,52 @@ function squareSum1(arr) {
 // console.log(squareSum1(arrSum));
 
 /************** 高阶函数的应用  结束*******/
+
+
+/************** filter()方法的应用*******/
+/*
+* 和map()方法类似，Array的filter()方法也接收一个函数。和map()方法不同的
+* filter() 被传图的函数依次作用域每个元素，然后根据返回值，是true or false
+* 决定保留还是丢弃该元素。
+*
+* filter()j接收的回调韩式，其实可以有多个参数。通常我们仅使用第一个参数，表示Array的某个元素
+* 回到函数还可以接受另外两个参数，分别为元素的下标位置和数组本身。
+* */
+//利用filter，巧妙的的去除Array的重复元素
+var newArr0=[],
+    arr01 = [123,33,3,2,13,123,2,3];
+arr01.filter(function (ele, index,arr) {
+    newArr0[arr.indexOf(ele)]=ele;
+});
+console.log(newArr0);
+/************** 高阶函数的应用  结束*******/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
