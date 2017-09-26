@@ -161,10 +161,11 @@ function squareSum1(arr) {
 //利用filter，巧妙的的去除Array的重复元素
 var newArr0=[],
     arr01 = [123,33,3,2,13,123,2,3];
-arr01.filter(function (ele, index,arr) {
-    newArr0[arr.indexOf(ele)]=ele;
+ newArr0 = arr01.filter(function (ele, index,arr) {
+    return arr.indexOf(ele) === index;
 });
 console.log(newArr0);
+/*因为indexOf函数总是返回第一个元素的位置，后续的重复元素位置与indexOf不同，因此被filter过滤掉了*/
 /************** 高阶函数的应用  结束*******/
 
 
